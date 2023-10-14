@@ -1,0 +1,13 @@
+<h1>Welcome to myQuote</h1>
+<p>If someone said a thing, it'll be here!</p>
+
+<h3>Most Recent Quotes</h3>
+<hr />
+<%= @quotes.each do |quote| %>
+    <div class="card bg-body-teriary" style="margin-bottom:10px">
+    <div class="card-body">
+        <p class="card-text"><%= quote.qtext %></p>
+        
+        </div>
+        </div>
+        <% end %>
