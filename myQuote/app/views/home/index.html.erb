@@ -3,11 +3,12 @@
 
 <h3>Most Recent Quotes</h3>
 <hr />
-<%= @quotes.each do |quote| %>
+<% @quotes.each do |quote| %>
     <div class="card bg-body-teriary" style="margin-bottom:10px">
     <div class="card-body">
-        <p class="card-text"><%= quote.qtext %></p>
         
+        <p class="card-text"><%= quote.qtext %></p>
+
         </div>
-        </div>
-        <% end %>
+    </div>
+<% end %>

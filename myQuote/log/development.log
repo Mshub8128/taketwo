@@ -901,3 +901,391 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 115ms (Views: 72.1ms | ActiveRecord: 0.2ms | Allocations: 43401)
 
 
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "John"], ["lname", "Smith"], ["email", "JSmith@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:10:29.451217"], ["updated_at", "2023-10-14 07:10:29.451217"]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Sarah"], ["lname", "Johnson"], ["email", "SJohnson@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:01.160703"], ["updated_at", "2023-10-14 07:12:01.160703"]]
+  [1m[36mTRANSACTION (26.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "David"], ["lname", "Brown"], ["email", "DBrown@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:09.855576"], ["updated_at", "2023-10-14 07:12:09.855576"]]
+  [1m[36mTRANSACTION (22.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Emily"], ["lname", "Davis"], ["email", "EDavis@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:17.175472"], ["updated_at", "2023-10-14 07:12:17.175472"]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Michael"], ["lname", "Wilson"], ["email", "MWilson@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:24.579810"], ["updated_at", "2023-10-14 07:12:24.579810"]]
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Jennifer"], ["lname", "Lee"], ["email", "JLee@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:31.470557"], ["updated_at", "2023-10-14 07:12:31.470557"]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Robert"], ["lname", "Anderson"], ["email", "RAnderson@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:38.960807"], ["updated_at", "2023-10-14 07:12:38.960807"]]
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Laura"], ["lname", "Martinez"], ["email", "LMartinez@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:46.791717"], ["updated_at", "2023-10-14 07:12:46.791717"]]
+  [1m[36mTRANSACTION (24.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "William"], ["lname", "Jackson"], ["email", "WJackson@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-14 07:12:56.791879"], ["updated_at", "2023-10-14 07:12:56.791879"]]
+  [1m[36mTRANSACTION (25.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (13.7ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Jaden"], ["lname", "Smith"], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:17:34.450206"], ["updated_at", "2023-10-14 07:17:34.450206"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (0.5ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "George"], ["lname", "Costanza"], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:17:41.226729"], ["updated_at", "2023-10-14 07:17:41.226729"]]
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (0.5ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Brick"], ["lname", ""], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:17:47.014602"], ["updated_at", "2023-10-14 07:17:47.014602"]]
+  [1m[36mTRANSACTION (25.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (0.5ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Homer"], ["lname", "Simpson"], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:17:52.973458"], ["updated_at", "2023-10-14 07:17:52.973458"]]
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (0.6ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Derek"], ["lname", "Zoolander"], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:17:58.839508"], ["updated_at", "2023-10-14 07:17:58.839508"]]
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (0.5ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Charlie"], ["lname", "Day"], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:18:04.298397"], ["updated_at", "2023-10-14 07:18:04.298397"]]
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSource Create (0.3ms)[0m  [1m[32mINSERT INTO "sources" ("fname", "lname", "byear", "dyear", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Leslie"], ["lname", "Neilson"], ["byear", nil], ["dyear", nil], ["bio", nil], ["created_at", "2023-10-14 07:18:10.787772"], ["updated_at", "2023-10-14 07:18:10.787772"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuote Create (0.5ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "I don't think I'm as revolutionary as Galileo, but I don't think I'm not as revolutionary as Galileo."], ["qyear", "2015"], ["qcom", "jaden"], ["ispublic", 1], ["user_id", 2], ["source_id", 1], ["created_at", "2023-10-14 07:18:21.092138"], ["updated_at", "2023-10-14 07:18:21.092138"]]
+  [1m[36mTRANSACTION (19.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuote Create (1.1ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "being born was the most influential thing that's ever happened to me, for myself."], ["qyear", "2014"], ["qcom", "jaden"], ["ispublic", 1], ["user_id", 4], ["source_id", 1], ["created_at", "2023-10-14 07:18:31.110558"], ["updated_at", "2023-10-14 07:18:31.110558"]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuote Create (2.3ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "Oh, yeah, Reilly? Well, the jerk store called, and they're running out of you."], ["qyear", "1997"], ["qcom", "played by Jason Alexander as George Costanza"], ["ispublic", 1], ["user_id", 3], ["source_id", 2], ["created_at", "2023-10-14 07:18:38.272972"], ["updated_at", "2023-10-14 07:18:38.272972"]]
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mQuote Create (2.2ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "Loud noises."], ["qyear", "2004"], ["qcom", "Brick steve carrel"], ["ispublic", 1], ["user_id", 9], ["source_id", 3], ["created_at", "2023-10-14 07:18:46.478203"], ["updated_at", "2023-10-14 07:18:46.478203"]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mQuote Create (0.4ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "I have three kids and no money. Why can't I have no kids and three money?"], ["qyear", "2007"], ["qcom", "homer"], ["ispublic", 1], ["user_id", 5], ["source_id", 4], ["created_at", "2023-10-14 07:18:52.670620"], ["updated_at", "2023-10-14 07:18:52.670620"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mQuote Create (1.7ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "Have you ever wondered if there was more to life, other than being really, really, ridiculously good looking?"], ["qyear", "2001"], ["qcom", "derek zoolander"], ["ispublic", 1], ["user_id", 6], ["source_id", 5], ["created_at", "2023-10-14 07:18:58.062196"], ["updated_at", "2023-10-14 07:18:58.062196"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mQuote Create (2.4ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "Is your cat making too much noise all the time?"], ["qyear", "2009"], ["qcom", "charlie day"], ["ispublic", 1], ["user_id", 4], ["source_id", 6], ["created_at", "2023-10-14 07:19:05.642981"], ["updated_at", "2023-10-14 07:19:05.642981"]]
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mSource Load (0.0ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mQuote Create (0.6ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", "If animals have taught me anything, It's that you can easily die and very quickly under a bus and on the side of the road."], ["qyear", "2010"], ["qcom", "charlie day"], ["ispublic", 1], ["user_id", 11], ["source_id", 6], ["created_at", "2023-10-14 07:19:11.507020"], ["updated_at", "2023-10-14 07:19:11.507020"]]
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mQuote Create (0.4ms)[0m  [1m[32mINSERT INTO "quotes" ("qtext", "qyear", "qcom", "ispublic", "user_id", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["qtext", " Like a midget at a urinal, I was going to have to stay on my toes."], ["qyear", ""], ["qcom", "leslie neilson"], ["ispublic", 1], ["user_id", 7], ["source_id", 7], ["created_at", "2023-10-14 07:19:17.129126"], ["updated_at", "2023-10-14 07:19:17.129126"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (1.6ms)[0m  [1m[32mINSERT INTO "categories" ("catname", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["catname", "Comedy"], ["created_at", "2023-10-14 07:21:26.610949"], ["updated_at", "2023-10-14 07:21:26.610949"]]
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("catname", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["catname", "Idiot"], ["created_at", "2023-10-14 07:21:38.935740"], ["updated_at", "2023-10-14 07:21:38.935740"]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 1], ["category_id", 2], ["created_at", "2023-10-14 07:24:02.669253"], ["updated_at", "2023-10-14 07:24:02.669253"]]
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 2], ["category_id", 2], ["created_at", "2023-10-14 07:24:10.244023"], ["updated_at", "2023-10-14 07:24:10.244023"]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 3], ["category_id", 1], ["created_at", "2023-10-14 07:24:15.904959"], ["updated_at", "2023-10-14 07:24:15.904959"]]
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 4], ["category_id", 1], ["created_at", "2023-10-14 07:24:29.850145"], ["updated_at", "2023-10-14 07:24:29.850145"]]
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 5], ["category_id", 1], ["created_at", "2023-10-14 07:24:29.878806"], ["updated_at", "2023-10-14 07:24:29.878806"]]
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 4], ["category_id", 1], ["created_at", "2023-10-14 07:24:55.583571"], ["updated_at", "2023-10-14 07:24:55.583571"]]
+  [1m[36mTRANSACTION (460.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 6], ["category_id", 1], ["created_at", "2023-10-14 07:25:02.358220"], ["updated_at", "2023-10-14 07:25:02.358220"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 7], ["category_id", 1], ["created_at", "2023-10-14 07:25:07.101095"], ["updated_at", "2023-10-14 07:25:07.101095"]]
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 8], ["category_id", 1], ["created_at", "2023-10-14 07:25:12.634135"], ["updated_at", "2023-10-14 07:25:12.634135"]]
+  [1m[36mTRANSACTION (18.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuoteCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "quote_categories" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 9], ["category_id", 1], ["created_at", "2023-10-14 07:25:18.513621"], ["updated_at", "2023-10-14 07:25:18.513621"]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:25:40 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.0ms | Allocations: 12298)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'sources' was not found on Quote; perhaps you misspelled it?):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:26:38 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1023)
+  Rendered layouts/_header.html.erb (Duration: 9.8ms | Allocations: 508)
+  Rendered layout layouts/application.html.erb (Duration: 136.5ms | Allocations: 35006)
+Completed 200 OK in 206ms (Views: 140.4ms | ActiveRecord: 1.7ms | Allocations: 58135)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:29:29 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1051)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 34505)
+Completed 200 OK in 129ms (Views: 72.8ms | ActiveRecord: 1.8ms | Allocations: 56568)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:30:23 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 440)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 34091)
+Completed 200 OK in 136ms (Views: 77.1ms | ActiveRecord: 1.5ms | Allocations: 56154)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:31:59 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1633)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1735)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.6ms | Allocations: 23743)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `source' for #<ActionView::Base:0x0000000000c468>):
+     7:     <div class="card bg-body-teriary" style="margin-bottom:10px">
+     8:     <div class="card-body">
+     9:         <h4 class="card-title><%= quote.qtext %></h4>
+    10:         <p class="card-text"><%= source.fname source.lname %></p>
+    11:         
+    12:         </div>
+    13:         </div>
+  
+app/views/home/index.html.erb:10
+app/views/home/index.html.erb:6:in `each'
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:34:47 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (1.9ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1634)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1736)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 3.5ms | Allocations: 23744)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `source' for #<ActionView::Base:0x0000000000c468>):
+     7:     <div class="card bg-body-teriary" style="margin-bottom:10px">
+     8:     <div class="card-body">
+     9:         <h4 class="card-title><%= quote.qtext %></h4>
+    10:         <p class="card-text"><%= source.where(quote.source_id LIKE source.source_id) %></p>
+    11:         
+    12:         </div>
+    13:         </div>
+  
+app/views/home/index.html.erb:10
+app/views/home/index.html.erb:6:in `each'
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:35:00 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 192)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 499)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 33388)
+Completed 200 OK in 100ms (Views: 93.7ms | ActiveRecord: 0.4ms | Allocations: 35879)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:35:13 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 412)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 33967)
+Completed 200 OK in 110ms (Views: 65.5ms | ActiveRecord: 1.5ms | Allocations: 56030)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:35:36 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.5ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 805)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 425)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3919)
+Completed 200 OK in 43ms (Views: 14.3ms | ActiveRecord: 0.6ms | Allocations: 6361)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:36:06 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 196)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 426)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3331)
+Completed 200 OK in 53ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 5773)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:53:14 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1623)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1726)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.4ms | Allocations: 23736)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Welcome to myQuote</h1>
+<p>If someone said a thing, it'll be here!</p>
+
+<h3>Most Recent Quotes</h3>
+<hr />
+<% @quotes.each do |quote| %>
+    <div class="card bg-body-teriary" style="margin-bottom:10px">
+    <div class="card-body">
+        
+        <p class="card-text"><%= quote.qtext %></p>
+        <% quote.source_id.each do |source| %>
+            <p class="card-text"><%= source.fname %></p>
+        </div>
+        </div>
+        <% end %>
+):
+1:    <h1>Welcome to myQuote</h1>
+2:    <p>If someone said a thing, it'll be here!</p>
+3:    
+4:    <h3>Most Recent Quotes</h3>
+5:    <hr />
+6:    <% @quotes.each do |quote| %>
+7:        <div class="card bg-body-teriary" style="margin-bottom:10px">
+8:        <div class="card-body">
+9:            
+10:            <p class="card-text"><%= quote.qtext %></p>
+11:            <% quote.source_id.each do |source| %>
+12:                <p class="card-text"><%= source.fname %></p>
+13:            </div>
+14:            </div>
+15:            <% end %>
+  
+app/views/home/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/home/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/home/index.html.erb:17: syntax error, unexpected end-of-input
+app/views/home/index.html.erb:17: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2023-10-14 15:54:07 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.6ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 194)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 499)
+  Rendered layout layouts/application.html.erb (Duration: 69.4ms | Allocations: 33693)
+Completed 200 OK in 78ms (Views: 72.3ms | ActiveRecord: 0.7ms | Allocations: 36184)
+
+
