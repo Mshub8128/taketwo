@@ -21,19 +21,19 @@
 
         <% if !logged_in? %>
           <li class="nav-item">
-          <%= link_to 'Sign Up', new_user_path, class:"nav-link" %>
+          <li><%= link_to 'Sign Up', new_user_path, class:"nav-link" %></li>
           </li>
         <% end %>
         
         <% if !logged_in? %>
           <li class="nav-item">
-          <li><a class="nav-link" href="#">Sign In</a></li>
+          <li><%= link_to 'Sign In', login_path, class:"nav-link" %></li>
           </li>
         <% end %>
 
         <% if logged_in? %>
           <li class="nav-item">
-          <li><a class="nav-link" href="#">Sign Out</a></li>
+          <%= button_to "Sign Out", logout_path, method: :delete, class:"btn btn-link nav-link" %>
           </li>
         <% end %>
 
@@ -46,7 +46,7 @@
           <%= link_to "My Account", userhome_path, class:"dropdown-item" %>
           <%= link_to "My Quotes", your_quotes_path, class:"dropdown-item" %>
           <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+          <%= link_to "Add New Quote", new_quote_path, class:"dropdown-item" %>
           </ul>
         </li>
         <% end %>
