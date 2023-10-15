@@ -2299,3 +2299,393 @@ Processing by SearchController#index as HTML
 Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 1.1ms | Allocations: 10289)
 
 
+Started GET "/" for 127.0.0.1 at 2023-10-15 12:31:17 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (3.8ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (4.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 508)
+  Rendered layouts/_header.html.erb (Duration: 7.5ms | Allocations: 1783)
+  Rendered layout layouts/application.html.erb (Duration: 142.1ms | Allocations: 35623)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 9.4ms | Allocations: 57655)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+        <li><a class="nav-link" href="/search">Search</a></li>
+        </li>
+
+        <li class="nav-item">
+        <%= link_to 'About', about_path, class:"nav-link" %>
+        </li>
+
+        <% if !logged_in? %>
+          <li class="nav-item">
+          <%= link_to 'Sign Up', new_user_path, class:"nav-link" %>
+          </li>
+        <% end %>
+        
+        <% if !logged_in? %>
+          <li class="nav-item">
+          <li><a class="nav-link" href="#">Sign In</a></li>
+          </li>
+        <% end %>
+
+        <% if logged_in? %>
+          <li class="nav-item">
+          <li><a class="nav-link" href="#">Sign Out</a></li>
+          </li>
+        <% end %>
+
+        <% if logged_in? && !is_administrator? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            User
+          </a>
+          <ul class="dropdown-menu">
+          <%= link_to "My Account", userhome_path, class:"dropdown-item" %>
+          <%= link_to "My Quotes", your_quotes_path, class:"dropdown-item" %>
+          <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+          </ul>
+        </li>
+        <% end %>
+
+        <% if logged_in? && is_administrator? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-disabled="false">
+          Admin
+          </a>
+          <ul class ="dropdown-menu">
+          <%= link_to "Admin Home", admin_path, class:"dropdown-item" %>
+          <li><%= link_to 'Manage Users', users_path, class:"dropdown-item" %></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- 
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+2:      <div class="container-fluid">
+3:        <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+4:        
+5:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+6:          <span class="navbar-toggler-icon"></span>
+7:        </button>
+8:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+9:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+10:            <li class="nav-item">
+11:            <%= link_to "Home", root_path, class: "nav-link" %>
+12:            </li>
+13:    
+14:            <li class="nav-item">
+15:            <li><a class="nav-link" href="/search">Search</a></li>
+16:            </li>
+17:    
+18:            <li class="nav-item">
+19:            <%= link_to 'About', about_path, class:"nav-link" %>
+20:            </li>
+21:    
+22:            <% if !logged_in? %>
+23:              <li class="nav-item">
+24:              <%= link_to 'Sign Up', new_user_path, class:"nav-link" %>
+25:              </li>
+26:            <% end %>
+27:            
+28:            <% if !logged_in? %>
+29:              <li class="nav-item">
+30:              <li><a class="nav-link" href="#">Sign In</a></li>
+31:              </li>
+32:            <% end %>
+33:    
+34:            <% if logged_in? %>
+35:              <li class="nav-item">
+36:              <li><a class="nav-link" href="#">Sign Out</a></li>
+37:              </li>
+38:            <% end %>
+39:    
+40:            <% if logged_in? && !is_administrator? %>
+41:            <li class="nav-item dropdown">
+42:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+43:                User
+44:              </a>
+45:              <ul class="dropdown-menu">
+46:              <%= link_to "My Account", userhome_path, class:"dropdown-item" %>
+47:              <%= link_to "My Quotes", your_quotes_path, class:"dropdown-item" %>
+48:              <li><hr class="dropdown-divider"></li>
+49:                <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+50:              </ul>
+51:            </li>
+52:            <% end %>
+53:    
+54:            <% if logged_in? && is_administrator? %>
+55:            <li class="nav-item dropdown">
+56:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-disabled="false">
+57:              Admin
+58:              </a>
+59:              <ul class ="dropdown-menu">
+60:              <%= link_to "Admin Home", admin_path, class:"dropdown-item" %>
+61:              <li><%= link_to 'Manage Users', users_path, class:"dropdown-item" %></li>
+62:              </ul>
+63:            </li>
+64:          </ul>
+65:          <!-- 
+66:          <form class="d-flex" role="search">
+67:            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+68:            <button class="btn btn-outline-success" type="submit">Search</button>
+69:          </form>
+70:          -->
+71:        </div>
+72:      </div>
+73:    </nav>
+  
+app/views/layouts/_header.html.erb:75: syntax error, unexpected end-of-input
+app/views/layouts/_header.html.erb:75: syntax error, unexpected end-of-input
+app/views/layouts/_header.html.erb:75: syntax error, unexpected end-of-input
+app/views/layouts/_header.html.erb:75: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-10-15 12:32:24 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 273)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 53.1ms | Allocations: 14263)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 17243)
+Completed 200 OK in 79ms (Views: 71.6ms | ActiveRecord: 1.1ms | Allocations: 19735)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-10-15 12:32:30 +0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 31.0ms | Allocations: 3883)
+  Rendered users/new.html.erb within layouts/application (Duration: 44.3ms | Allocations: 4197)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 13.6ms | Allocations: 3312)
+  Rendered layout layouts/application.html.erb (Duration: 65.4ms | Allocations: 9749)
+Completed 200 OK in 80ms (Views: 68.8ms | ActiveRecord: 0.7ms | Allocations: 14134)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-10-15 12:33:07 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"fname"=>"Mr", "lname"=>"ruler", "email"=>"notafake@email.com", "password"=>"[FILTERED]", "is_admin"=>"false", "status"=>"Active"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `block in create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Mr"], ["lname", "ruler"], ["email", "notafake@email.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-15 04:33:08.062053"], ["updated_at", "2023-10-15 04:33:08.062053"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 358ms (ActiveRecord: 24.0ms | Allocations: 3978)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-10-15 12:33:08 +0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1197)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1287)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1914)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- app/views/sessions/new.html.erb -->
+<% if flash[:error] %>
+    <p class="error" style="color:red;"><%= flash[:error] %></p>
+<% end %>
+
+<h2>Sign in</h2>
+<%= form_tag login_path, method: :post do %>
+    <div class="form-group" style="padding-bottom: 10px;">
+        <%= email_field_tag :email, nil required: true, placeholder: 'Email Address', class: 'form-control' %>
+        </div>
+        <div class="form-group" style="padding-bottom: 10px;">
+        <%= password_field_tag :password, nil, required: true, placeholder: 'Password', class: 'form-control' %>
+        </div>
+        <div>
+            <%= submit_tag 'Login', class: 'btn btn-primary' %>
+        </div>
+    <% end %>
+):
+1:    <!-- app/views/sessions/new.html.erb -->
+2:    <% if flash[:error] %>
+3:        <p class="error" style="color:red;"><%= flash[:error] %></p>
+4:    <% end %>
+5:    
+6:    <h2>Sign in</h2>
+7:    <%= form_tag login_path, method: :post do %>
+8:        <div class="form-group" style="padding-bottom: 10px;">
+9:            <%= email_field_tag :email, nil required: true, placeholder: 'Email Address', class: 'form-control' %>
+10:            </div>
+11:            <div class="form-group" style="padding-bottom: 10px;">
+12:            <%= password_field_tag :password, nil, required: true, placeholder: 'Password', class: 'form-control' %>
+13:            </div>
+14:            <div>
+15:                <%= submit_tag 'Login', class: 'btn btn-primary' %>
+16:            </div>
+17:        <% end %>
+  
+app/views/sessions/new.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/sessions/new.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/login" for 127.0.0.1 at 2023-10-15 12:38:00 +0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 891)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.5ms | Allocations: 3806)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 7220)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.2ms | Allocations: 8050)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-10-15 12:38:14 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"notafake@email.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notafake@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 281ms (ActiveRecord: 0.3ms | Allocations: 1575)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2023-10-15 12:38:14 +0800
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 2.1ms | Allocations: 356)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 17.9ms | Allocations: 1556)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4157)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.3ms | Allocations: 4668)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-15 12:38:52 +0800
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 107)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 12.8ms | Allocations: 763)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 3294)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms | Allocations: 3939)
+
+
+Started GET "/search" for 127.0.0.1 at 2023-10-15 12:38:53 +0800
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 598)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 740)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 3744)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms | Allocations: 4400)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-15 12:38:54 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 1], ["id", 2], ["id", 3], ["id", 4]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 269)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 725)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3330)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 5255)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2023-10-15 12:38:59 +0800
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 0.6ms | Allocations: 184)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3075)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 3332)
+
+
+Started GET "/your-quotes" for 127.0.0.1 at 2023-10-15 12:39:03 +0800
+Processing by HomeController#uquotes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uquotes.html.erb within layouts/application
+  Rendered home/uquotes.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1152)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1239)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1477)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h3>Your Quotes</h3>
+    2: <h4>(well.. The quotes you've uploaded, anyway)</h4>
+    3: <hr />
+    4: <% @quotes.each do |quote| %>
+    5:     <div class="card bg-body-teriary" style="margin-bottom:10px">
+    6:     <div class="card-body">
+    7:         <h4 class="card-title"><%= quote.qtext %></h4>
+  
+app/views/home/uquotes.html.erb:4
