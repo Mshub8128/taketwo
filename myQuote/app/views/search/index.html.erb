@@ -19,7 +19,7 @@ part of the code that follows will be executed -->
             to the view -->
             <% @quotematch.each do |quote| %>
             <h5 class="text-primary"><%= quote.qtext %></h5>
-            <p><%= quote.source.fname + " " + quote.source.lname + ", " + quote.qyear %> [<a href="/quotes/<%= quote.id %>">Details</a>]</p>
+            <p><%= "#{quote.source.fname} #{quote.source.lname} #{quote.qyear}" %> [<a href="/quotes/<%= quote.id %>">Details</a>]</p>
             <br />
             <% end %>
     <% else %>

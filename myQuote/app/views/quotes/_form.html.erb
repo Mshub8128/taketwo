@@ -50,24 +50,31 @@
     <% end %>
   </div>
   
+  <!-- Container for the quote source --> 
 
 
-  <!-- Container for the quote category -->
+    <div class="form-group" style="padding-bottom: 10px;">
+     <p>
+     <%= f.collection_select :source_id, Source.all, :id, Proc.new { |sou| "#{sou.fname} #{sou.lname}" }, { include_blank: 'Select a source' }, class: 'form-select' %>
+     </p>
+     </div>
+
+            <!-- Container for the quote category -->
     <div id="categories-container">
     
       <% @quote.quote_categories.each do |quote_category| %>
 
     <!-- Now create an initial instance of the category field with Bootstrap styling -->
-    <%= f.fields_for :quote_categories do |quote_category| %>
+    <%= f.fields_for :quote_categories, quote_category do |qc| %>
     <div class="category-field row mb-2">
     <div class="col-auto">
 
     <!-- The following lines create the dropdown list for selecting a category -->
 
-    <%= quote_category.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
-    <%= quote_category.select :category_id, Category.all.collect { |cat| [cat.catname, cat.id] }, { include_blank: true }, class: "form-control d-inline-block" %>
+    <%= qc.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
+    <%= qc.select :category_id, Category.all.collect { |cat| [cat.catname, cat.id] }, { include_blank: true }, class: "form-control d-inline-block" %>
   </div>
-  <div class="col-auto">
+  <div class="col-auto align-self-end">
 
   <%= link_to '[-] Remove this category', '#', class: 'remove-category', style: "color: red; text-decoration: none;" %>
   <!-- let's users remove a field -->
@@ -84,3 +91,24 @@
  </div>
  <% end %>
  
+ <script>
+ //waits for document to fully load
+ document.addEventListener('DOMContentLoaded', function() {
+  //adds an event listener to detect clicks of the "remove this line" links
+  document.addEventListener('click', function(e) {
+    //if an object with 'remove-category' as a style class is clicked
+    if (e.target && e.target.classList.contains('remove-category')){
+      //prevents link behaving as normal link
+      e.preventDefault();
+
+      //makes sure if the remove function executes, it won't remove all
+      const categoryFields = document.querySelectorAll('.category-field');
+      //if at least one still remains, delete the one that the link is associated with
+      if (categoryFields.length > 1) {
+        e.target.closest('.category-field').remove();
+      }
+    }
+  });
+ });
+
+ </script>

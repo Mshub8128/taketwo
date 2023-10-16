@@ -1,12 +1,12 @@
 <h3>Your Quotes</h3>
-<h4>(well.. The quotes you've uploaded, anyway)</h4>
+<h4>(well.. The quotes you put up, anyway)</h4>
 <hr />
 
 <% @quotes.each do |quote| %>
     <div class="card bg-body-teriary" style="margin-bottom:10px">
     <div class="card-body">
         <h4 class="card-title"><%= quote.qtext %></h4>
-        <p class="card-text"><%= quote.source.fname + " " + quote.source.lname %><br />[<a href="/quotes/<%= quote.id %>">Details</a>]</p>
+        <p class="card-text"><%= "#{quote.source.fname} #{quote.source.lname}" %><br />[<a href="/quotes/<%= quote.id %>">Details</a>]</p>
         </div>
         </div>
         <% end %>
