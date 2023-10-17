@@ -6,7 +6,7 @@
     <div class="card bg-body-teriary" style="margin-bottom:10px">
     <div class="card-body">
         <h4 class="card-title"><%= quote.qtext %></h4>
-        <p class="card-text"><%= "#{quote.source.fname} #{quote.source.lname}" %><br />[<a href="/quotes/<%= quote.id %>">Details</a>]</p>
+        <p class="card-text"><%= "#{quote.source.fname} #{quote.source.lname}, #{quote.qyear}" %><br />[<a href="/quotes/<%= quote.id %>">Quote</a>] [<a href="/sources/<%= quote.source.id %>">Source</a>]</p>
         </div>
         </div>
         <% end %>

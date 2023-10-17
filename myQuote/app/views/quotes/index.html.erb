@@ -4,7 +4,27 @@
 
 <div id="quotes">
   <% @quotes.each do |quote| %>
-    <%= render quote %>
+    <%# render quote %>
+    <div class="mb-3">
+      <label class="form-label"><strong>Quote:</strong></label> <%= quote.qtext %>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label"><strong>Source:</strong></label> <%= "#{quote.source.fname} #{quote.source.lname}, #{quote.qyear}" %>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label"><strong>Comments:</strong></label> <%= quote.qcom %>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label"><strong>Public:</strong></label> <%= quote.ispublic %>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label"><strong>User:</strong></label> <%= quote.user.fname %>
+    </div>
+
     <p>
       <%= link_to "Show this quote", quote %>
     </p>

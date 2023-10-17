@@ -4,11 +4,13 @@
 <h3>Most Recent Quotes</h3>
 <hr />
 <% @quotes.each do |quote| %>
+    <% if quote.ispublic? %>
     <div class="card bg-body-teriary" style="margin-bottom:10px">
     <div class="card-body">
         
     <p class="card-text"><%= quote.qtext %></p>
-    <p class="card-text"><%= "   -   " + quote.source.fname + " " + quote.source.lname + ", " + quote.qyear %></p> 
-        </div>
+    <p class="card-text"><%= "   -   #{quote.source.fname} #{quote.source.lname}, #{quote.qyear}" %> <br />[<a href="/quotes/<%= quote.id %>">Quote</a>] [<a href="/sources/<%= quote.source.id %>">Source</a>] </p> 
+    <% end %>    
+    </div>
     </div>
 <% end %>

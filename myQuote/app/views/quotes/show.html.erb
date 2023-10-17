@@ -1,10 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @quote %>
 
+<div class="mb-3">
+ <label class="form-label"><strong>Quote:</strong></label> <%= @quote.qtext %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Comments:</strong></label> <%= @quote.qcom %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Public:</strong></label> <%= @quote.ispublic %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>User:</strong></label> <%= @quote.user.fname %>
+</div>
+
+
+<% if logged_in? && (is_administrator? || (@quote.user_id == session[:user_id]) ) %>
 <div>
   <%= link_to "Edit this quote", edit_quote_path(@quote) %> |
   <%= link_to "Back to quotes", quotes_path %>
 
   <%= button_to "Destroy this quote", @quote, method: :delete %>
 </div>
+<% else %>
+<div>
+<%= link_to "Return to main", root_path %>
+</div>
+<% end %>

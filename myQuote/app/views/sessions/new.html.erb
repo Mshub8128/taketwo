@@ -3,6 +3,8 @@
     <p class="error" style="color:red;"><%= flash[:error] %></p>
 <% end %>
 
+<p style="color: green"><%= notice %></p> 
+
 <h2>Sign in</h2>
 <%= form_tag login_path, method: :post do %>
     <div class="form-group" style="padding-bottom: 10px;">

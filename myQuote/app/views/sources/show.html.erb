@@ -1,10 +1,46 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @source %>
+<%# render @source %>
 
+
+
+<div class="mb-3">
+ <label class="form-label"><strong></label><%= "#{@source.fname} #{@source.lname}" %></strong>
+</div>
+
+<%# conditional check on whether birth/ death years are known for formatting %>
+
+<% if @source.byear.nil? || @source.byear.empty? %>
+  <% birth = "unknown year of birth" %>
+<% else %>
+  <% birth = @source.byear %>
+<% end %>
+
+<% if @source.dyear.nil? || @source.dyear.empty? %>
+  <% death = "unknown" %>
+<% else %>
+  <% death = @source.dyear %>
+<% end %>
+
+<div class="mb-3">
+ <label class="form-label"><%= "#{birth} - #{death}" %>
+</div>
+
+
+<div class="mb-3">
+ <label class="form-label"><strong>Biography:</strong></label> <%= @source.bio %>
+</div>
+
+
+<% if logged_in? && is_administrator? %>
 <div>
   <%= link_to "Edit this source", edit_source_path(@source) %> |
   <%= link_to "Back to sources", sources_path %>
 
   <%= button_to "Destroy this source", @source, method: :delete %>
 </div>
+<% else %>
+<div>
+  <%= link_to "Return to main", root_path %>
+</div>
+<% end %>
