@@ -21757,3 +21757,1745 @@ ActionView::Template::Error (undefined local variable or method `new' for #<Acti
 app/views/quotes/_form.html.erb:88
 app/views/quotes/_form.html.erb:18
 app/views/quotes/edit.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:38:06 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (4.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (6.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 2], ["id", 9], ["id", 7], ["id", 6]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 815)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 26.6ms | Allocations: 5732)
+  Rendered layout layouts/application.html.erb (Duration: 147.4ms | Allocations: 39525)
+Completed 200 OK in 271ms (Views: 153.6ms | ActiveRecord: 12.4ms | Allocations: 61718)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2023-10-17 14:38:12 +0800
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered users/_form.html.erb (Duration: 54.8ms | Allocations: 8649)
+  Rendered users/new.html.erb within layouts/application (Duration: 60.7ms | Allocations: 8964)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 16.5ms | Allocations: 3306)
+  Rendered layout layouts/application.html.erb (Duration: 86.6ms | Allocations: 14515)
+Completed 200 OK in 102ms (Views: 90.4ms | ActiveRecord: 1.6ms | Allocations: 18866)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-10-17 14:38:36 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"fname"=>"blargh", "lname"=>"blargh", "email"=>"askodnaklsndask@alklsndklanslkdnla.com", "password"=>"[FILTERED]", "is_admin"=>"false", "status"=>"Active"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:38:in `block in create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "is_admin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "blargh"], ["lname", "blargh"], ["email", "askodnaklsndask@alklsndklanslkdnla.com"], ["password_digest", "[FILTERED]"], ["is_admin", 0], ["status", "Active"], ["created_at", "2023-10-17 06:38:36.734678"], ["updated_at", "2023-10-17 06:38:36.734678"]]
+  ↳ app/controllers/users_controller.rb:38:in `block in create'
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:38:in `block in create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 307ms (ActiveRecord: 26.6ms | Allocations: 3966)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-10-17 14:38:36 +0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 928)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.0ms | Allocations: 3358)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 6528)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms | Allocations: 7180)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-10-17 14:38:39 +0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 562)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 55.3ms | Allocations: 3339)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 6065)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.2ms | Allocations: 6323)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-10-17 14:38:43 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"askodnaklsndask@alklsndklanslkdnla.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "askodnaklsndask@alklsndklanslkdnla.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 343ms (ActiveRecord: 0.5ms | Allocations: 1584)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2023-10-17 14:38:44 +0800
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 5.5ms | Allocations: 438)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 4427)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.2ms | Allocations: 4686)
+
+
+Started GET "/your-quotes" for 127.0.0.1 at 2023-10-17 14:38:48 +0800
+Processing by HomeController#uquotes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uquotes.html.erb within layouts/application
+  [1m[36mQuote Load (5.5ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/views/home/uquotes.html.erb:5
+  Rendered home/uquotes.html.erb within layouts/application (Duration: 12.6ms | Allocations: 910)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.3ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 4063)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 5.6ms | Allocations: 4617)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2023-10-17 14:39:03 +0800
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 14.7ms | Allocations: 248)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3391)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.1ms | Allocations: 3649)
+
+
+Started GET "/users/19/edit" for 127.0.0.1 at 2023-10-17 14:39:05 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.8ms | Allocations: 1563)
+  Rendered users/edit.html.erb within layouts/application (Duration: 19.3ms | Allocations: 1895)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 452)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 4503)
+Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 0.2ms | Allocations: 6548)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:39:18 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 2], ["id", 9], ["id", 7], ["id", 6]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 257)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3409)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 5297)
+
+
+Started GET "/quotes/21" for 127.0.0.1 at 2023-10-17 14:39:21 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 4953)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 465)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 7666)
+Completed 200 OK in 38ms (Views: 28.5ms | ActiveRecord: 0.7ms | Allocations: 9443)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:39:37 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.4ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 2], ["id", 9], ["id", 7], ["id", 6]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 260)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 3415)
+Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 0.7ms | Allocations: 5299)
+
+
+Started GET "/sources/2" for 127.0.0.1 at 2023-10-17 14:39:39 +0800
+Processing by SourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/sources_controller.rb:63:in `set_source'
+  Rendering layout layouts/application.html.erb
+  Rendering sources/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered sources/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1260)
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 465)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 3972)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.3ms | Allocations: 5748)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:40:45 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 2], ["id", 9], ["id", 7], ["id", 6]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 263)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.7ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3449)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.6ms | Allocations: 5335)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-17 14:40:49 +0800
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 112)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 3601)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.2ms | Allocations: 4249)
+
+
+Started GET "/search" for 127.0.0.1 at 2023-10-17 14:40:51 +0800
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 598)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 15.0ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 4032)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.2ms | Allocations: 4689)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:40:52 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 2], ["id", 9], ["id", 7], ["id", 6]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 293)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 3445)
+Completed 200 OK in 53ms (Views: 46.4ms | ActiveRecord: 0.7ms | Allocations: 5329)
+
+
+Started GET "/quotes/9" for 127.0.0.1 at 2023-10-17 14:40:56 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2132)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4727)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.8ms | Allocations: 5479)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-10-17 14:41:29 +0800
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 988)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3332)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 3590)
+
+
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 14:42:04 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 90.5ms | Allocations: 11785)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 95.7ms | Allocations: 12055)
+  Rendered layout layouts/application.html.erb (Duration: 96.1ms | Allocations: 12142)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 4.7ms | Allocations: 25371)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new' for #<ActionView::Base:0x0000000000d778>):
+    85:   </div>
+    86: 
+    87:   <!—Create the submit button for the form -->
+    88:   <% if new.record? %>
+    89:   <div class="mt-3">
+    90:     <%= f.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+    91:   </div>
+  
+app/views/quotes/_form.html.erb:88
+app/views/quotes/_form.html.erb:18
+app/views/quotes/new.html.erb:3
+Started GET "/about" for 127.0.0.1 at 2023-10-17 14:43:15 +0800
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3372)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3630)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-17 14:43:17 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:43:17 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 2], ["id", 9], ["id", 7], ["id", 6]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 278)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.4ms | Allocations: 3348)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5791)
+Completed 200 OK in 31ms (Views: 16.4ms | ActiveRecord: 0.7ms | Allocations: 7678)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-10-17 14:43:20 +0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 545)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.7ms | Allocations: 3339)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6048)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 6305)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-10-17 14:43:23 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"admin@myquotes.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@myquotes.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 318ms (ActiveRecord: 0.2ms | Allocations: 882)
+
+
+Started GET "/admin" for 127.0.0.1 at 2023-10-17 14:43:24 +0800
+Processing by HomeController#aindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/aindex.html.erb within layouts/application
+  Rendered home/aindex.html.erb within layouts/application (Duration: 9.6ms | Allocations: 314)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.1ms | Allocations: 956)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 3435)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.1ms | Allocations: 3692)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-10-17 14:43:28 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2025)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4594)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.5ms | Allocations: 5600)
+
+
+Started GET "/users/18" for 127.0.0.1 at 2023-10-17 14:43:54 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 4.9ms | Allocations: 322)
+  Rendered users/show.html.erb within layouts/application (Duration: 39.7ms | Allocations: 9258)
+  Rendered layouts/_header.html.erb (Duration: 8.0ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 11848)
+Completed 200 OK in 72ms (Views: 60.8ms | ActiveRecord: 0.3ms | Allocations: 13341)
+
+
+Started DELETE "/users/18" for 127.0.0.1 at 2023-10-17 14:43:56 +0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mQuoteCategory Load (0.3ms)[0m  [1m[34mSELECT "quote_categories".* FROM "quote_categories" WHERE "quote_categories"."quote_id" = ?[0m  [["quote_id", 21]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mQuoteCategory Destroy (1.7ms)[0m  [1m[31mDELETE FROM "quote_categories" WHERE "quote_categories"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mQuote Destroy (1.9ms)[0m  [1m[31mDELETE FROM "quotes" WHERE "quotes"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (21.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 77ms (ActiveRecord: 27.3ms | Allocations: 9006)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-10-17 14:43:56 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1616)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4183)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.5ms | Allocations: 5132)
+
+
+Started GET "/users/19" for 127.0.0.1 at 2023-10-17 14:44:00 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 411)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 2967)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.3ms | Allocations: 4412)
+
+
+Started DELETE "/users/19" for 127.0.0.1 at 2023-10-17 14:44:02 +0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 19]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (31.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 42ms (ActiveRecord: 32.0ms | Allocations: 3864)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-10-17 14:44:02 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1544)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4109)
+Completed 200 OK in 24ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 5069)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:44:42 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 9], ["id", 7], ["id", 6], ["id", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 246)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3360)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 5240)
+
+
+Started GET "/search" for 127.0.0.1 at 2023-10-17 14:47:02 +0800
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 207)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 947)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3463)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 3730)
+
+
+Started GET "/search?category_query=com&commit=Search+Quotes" for 127.0.0.1 at 2023-10-17 14:47:37 +0800
+Processing by SearchController#index as HTML
+  Parameters: {"category_query"=>"com", "commit"=>"Search Quotes"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "quotes".* FROM "quotes" INNER JOIN "quote_categories" ON "quote_categories"."quote_id" = "quotes"."id" INNER JOIN "quote_categories" "quote_categories_quotes_join" ON "quote_categories_quotes_join"."quote_id" = "quotes"."id" INNER JOIN "categories" ON "categories"."id" = "quote_categories_quotes_join"."category_id" WHERE (categories.catname LIKE '%com%')[0m
+  ↳ app/views/search/index.html.erb:16
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mCACHE Source Load (0.0ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  Rendered search/index.html.erb within layouts/application (Duration: 71.9ms | Allocations: 16689)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 19975)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 1.2ms | Allocations: 20322)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:47:43 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 9], ["id", 7], ["id", 6], ["id", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 258)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3396)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 5278)
+
+
+Started GET "/quotes/" for 127.0.0.1 at 2023-10-17 14:47:47 +0800
+Processing by QuotesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/views/quotes/index.html.erb:6
+  Rendered quotes/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1019)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 407)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3590)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 4646)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:47:52 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 9], ["id", 7], ["id", 6], ["id", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 285)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.2ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3400)
+Completed 200 OK in 53ms (Views: 22.3ms | ActiveRecord: 0.6ms | Allocations: 5280)
+
+
+Started GET "/search" for 127.0.0.1 at 2023-10-17 14:48:10 +0800
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 207)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.9ms | Allocations: 941)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3460)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 3727)
+
+
+Started GET "/search?category_query=i&commit=Search+Quotes" for 127.0.0.1 at 2023-10-17 14:48:12 +0800
+Processing by SearchController#index as HTML
+  Parameters: {"category_query"=>"i", "commit"=>"Search Quotes"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "quotes".* FROM "quotes" INNER JOIN "quote_categories" ON "quote_categories"."quote_id" = "quotes"."id" INNER JOIN "quote_categories" "quote_categories_quotes_join" ON "quote_categories_quotes_join"."quote_id" = "quotes"."id" INNER JOIN "categories" ON "categories"."id" = "quote_categories_quotes_join"."category_id" WHERE (categories.catname LIKE '%i%')[0m
+  ↳ app/views/search/index.html.erb:16
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  Rendered search/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 2511)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 5775)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.8ms | Allocations: 6087)
+
+
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 14:48:55 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2394)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4951)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 5702)
+
+
+Started GET "/search" for 127.0.0.1 at 2023-10-17 14:49:03 +0800
+Processing by SearchController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 207)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 941)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3472)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.1ms | Allocations: 3739)
+
+
+Started GET "/search?category_query=come&commit=Search+Quotes" for 127.0.0.1 at 2023-10-17 14:49:05 +0800
+Processing by SearchController#index as HTML
+  Parameters: {"category_query"=>"come", "commit"=>"Search Quotes"}
+  Rendering layout layouts/application.html.erb
+  Rendering search/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "quotes".* FROM "quotes" INNER JOIN "quote_categories" ON "quote_categories"."quote_id" = "quotes"."id" INNER JOIN "quote_categories" "quote_categories_quotes_join" ON "quote_categories_quotes_join"."quote_id" = "quotes"."id" INNER JOIN "categories" ON "categories"."id" = "quote_categories_quotes_join"."category_id" WHERE (categories.catname LIKE '%come%')[0m
+  ↳ app/views/search/index.html.erb:16
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mCACHE Source Load (0.0ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/search/index.html.erb:22
+  Rendered search/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 5951)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 9253)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 1.1ms | Allocations: 9567)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-10-17 14:51:15 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 14:51:15 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (7.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 9], ["id", 7], ["id", 6], ["id", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 267)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 22.7ms | Allocations: 3347)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 5803)
+Completed 200 OK in 41ms (Views: 29.6ms | ActiveRecord: 7.7ms | Allocations: 7685)
+
+
+Started GET "/" for 127.0.0.1 at 2023-10-17 18:28:50 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" ORDER BY "quotes"."id" DESC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" IN (?, ?, ?, ?)[0m  [["id", 9], ["id", 7], ["id", 6], ["id", 5]]
+  ↳ app/controllers/home_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 816)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 25.4ms | Allocations: 5724)
+  Rendered layout layouts/application.html.erb (Duration: 127.2ms | Allocations: 39222)
+Completed 200 OK in 283ms (Views: 131.7ms | ActiveRecord: 2.4ms | Allocations: 61407)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-10-17 18:28:54 +0800
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1003)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 20.8ms | Allocations: 3371)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 6648)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.2ms | Allocations: 7303)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-10-17 18:28:59 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"louskunt@lololol.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "louskunt@lololol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/userhome
+Completed 302 Found in 358ms (ActiveRecord: 0.6ms | Allocations: 5297)
+
+
+Started GET "/userhome" for 127.0.0.1 at 2023-10-17 18:28:59 +0800
+Processing by HomeController#uindex as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uindex.html.erb within layouts/application
+  Rendered home/uindex.html.erb within layouts/application (Duration: 6.1ms | Allocations: 438)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.7ms | Allocations: 1810)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4413)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 4674)
+
+
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 18:29:02 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  Rendered quotes/_form.html.erb (Duration: 8.3ms | Allocations: 2061)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 22.0ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2426)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.8ms | Allocations: 10149)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!-- This will display errors related to both the Quote, Category, and Source -->
+
+  <% if quote.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% quote.errors.full_message.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--  Initiate the rendering of a form for the @Quote object in the QuotesController. 
+  Configure form to submit to the quotes_path using the POST method. Here I am using the
+  local: true option to ensure that the form data is sent as a regular HTTP request, 
+  rather than Rails default AJAX request method, so I get a full page reload (optional). -->
+  
+  <%= form_with(model: @quote, local: true) do |f| %>
+    
+  <!-- This is a hidden field for the requisite user_id which is extracted from the 
+  session object created when the user is logged in. Of course, app users should not be 
+  able to access this form at all if not logged in -->
+  
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <!-- Quote text form field with Bootstrap styling -->
+
+  <div class="form-group" style="padding-bottom: 10px;">
+    <%= f.text_area :qtext, placeholder: 'Enter a quote here', class: 'form-control' %> 
+  </div>
+
+  <!-- Quote year form with Bootstrap styling -->
+
+  <div class="form-group" style="padding-bottom: 10px;">
+    <%= f.text_field :qyear, placeholder: 'Quote Year', class: 'form-control' %>
+  </div>
+
+  <!-- Quote comment form field with Bootstrap styling -->
+
+  <div class="form-group" style="padding-bottom: 10px;">
+    <%= f.text_area :qcom, placeholder: 'Comment (optional)', class: 'form-control' %>
+  </div>
+
+  <!-- Recipe IsPublic setting form check box with Bootstrap styling -->
+ 
+  <div class="form-check" style="padding-bottom: 10px;">
+    <%= f.label :ispublic do %>
+      Public
+      <%= f.check_box :ispublic, class: "form-check-input" %>
+    <% end %>
+  </div>
+  
+  <!-- Container for the quote source --> 
+
+
+    <div class="form-group" style="padding-bottom: 10px;">
+     <p>
+     <%= f.collection_select :source_id, Source.all, :id, Proc.new { |sou| "#{sou.fname} #{sou.lname}" }, { include_blank: 'Select a source' }, class: 'form-select' %>
+     </p>
+    </div>
+
+  <!-- Container for the quote category -->
+    <div id="categories-container">
+      <% @quote.quote_categories.each do |quote_category| %>
+
+  <!-- Now create an initial instance of the category field with Bootstrap styling -->
+  
+  <%= f.fields_for :quote_categories, quote_category do |qc| %>
+    <div class="category-field row mb-2">
+    <div class="col-auto">
+
+    <!-- The following lines create the dropdown list for selecting a category -->
+
+    <%= qc.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
+    <%= qc.select :category_id, Category.all.collect { |cat| [cat.catname, cat.id] }, { include_blank: true }, class: "form-control d-inline-block" %>
+  </div>
+  <div class="col-auto align-self-end">
+
+  <%= link_to '[-] Remove this category', '#', class: 'remove-category', style: "color: red; text-decoration: none;" %>
+  <!-- let's users remove a field -->
+  </div>
+  </div>
+  <% end %>
+  <% end %>
+  </div>
+
+  <!—Create the submit button for the form -->
+  <% if f.new? %>
+  <div class="mt-3">
+    <%= f.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+  </div>
+  <% end %>
+<% end %>
+<% end %>
+ 
+
+ <script>
+ //waits for document to fully load
+ document.addEventListener('DOMContentLoaded', function() {
+  //adds an event listener to detect clicks of the "remove this line" links
+  document.addEventListener('click', function(e) {
+    //if an object with 'remove-category' as a style class is clicked
+    if (e.target && e.target.classList.contains('remove-category')){
+      //prevents link behaving as normal link
+      e.preventDefault();
+
+      //makes sure if the remove function executes, it won't remove all
+      const categoryFields = document.querySelectorAll('.category-field');
+      //if at least one still remains, delete the one that the link is associated with
+      if (categoryFields.length > 1) {
+        e.target.closest('.category-field').remove();
+      }
+    }
+  });
+ });
+
+ </script>
+):
+1:    <!-- This will display errors related to both the Quote, Category, and Source -->
+2:    
+3:      <% if quote.errors.any? %>
+4:        <div class="alert alert-danger">
+5:          <ul>
+6:            <% quote.errors.full_message.each do |msg| %>
+7:              <li><%= msg %></li>
+8:            <% end %>
+9:          </ul>
+10:        </div>
+11:      <% end %>
+12:    
+13:      <!--  Initiate the rendering of a form for the @Quote object in the QuotesController. 
+14:      Configure form to submit to the quotes_path using the POST method. Here I am using the
+15:      local: true option to ensure that the form data is sent as a regular HTTP request, 
+16:      rather than Rails default AJAX request method, so I get a full page reload (optional). -->
+17:      
+18:      <%= form_with(model: @quote, local: true) do |f| %>
+19:        
+20:      <!-- This is a hidden field for the requisite user_id which is extracted from the 
+21:      session object created when the user is logged in. Of course, app users should not be 
+22:      able to access this form at all if not logged in -->
+23:      
+24:      <%= f.hidden_field :user_id, value: current_user.id %>
+25:    
+26:      <!-- Quote text form field with Bootstrap styling -->
+27:    
+28:      <div class="form-group" style="padding-bottom: 10px;">
+29:        <%= f.text_area :qtext, placeholder: 'Enter a quote here', class: 'form-control' %> 
+30:      </div>
+31:    
+32:      <!-- Quote year form with Bootstrap styling -->
+33:    
+34:      <div class="form-group" style="padding-bottom: 10px;">
+35:        <%= f.text_field :qyear, placeholder: 'Quote Year', class: 'form-control' %>
+36:      </div>
+37:    
+38:      <!-- Quote comment form field with Bootstrap styling -->
+39:    
+40:      <div class="form-group" style="padding-bottom: 10px;">
+41:        <%= f.text_area :qcom, placeholder: 'Comment (optional)', class: 'form-control' %>
+42:      </div>
+43:    
+44:      <!-- Recipe IsPublic setting form check box with Bootstrap styling -->
+45:     
+46:      <div class="form-check" style="padding-bottom: 10px;">
+47:        <%= f.label :ispublic do %>
+48:          Public
+49:          <%= f.check_box :ispublic, class: "form-check-input" %>
+50:        <% end %>
+51:      </div>
+52:      
+53:      <!-- Container for the quote source --> 
+54:    
+55:    
+56:        <div class="form-group" style="padding-bottom: 10px;">
+57:         <p>
+58:         <%= f.collection_select :source_id, Source.all, :id, Proc.new { |sou| "#{sou.fname} #{sou.lname}" }, { include_blank: 'Select a source' }, class: 'form-select' %>
+59:         </p>
+60:        </div>
+61:    
+62:      <!-- Container for the quote category -->
+63:        <div id="categories-container">
+64:          <% @quote.quote_categories.each do |quote_category| %>
+65:    
+66:      <!-- Now create an initial instance of the category field with Bootstrap styling -->
+67:      
+68:      <%= f.fields_for :quote_categories, quote_category do |qc| %>
+69:        <div class="category-field row mb-2">
+70:        <div class="col-auto">
+71:    
+72:        <!-- The following lines create the dropdown list for selecting a category -->
+73:    
+74:        <%= qc.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
+75:        <%= qc.select :category_id, Category.all.collect { |cat| [cat.catname, cat.id] }, { include_blank: true }, class: "form-control d-inline-block" %>
+76:      </div>
+77:      <div class="col-auto align-self-end">
+78:    
+79:      <%= link_to '[-] Remove this category', '#', class: 'remove-category', style: "color: red; text-decoration: none;" %>
+80:      <!-- let's users remove a field -->
+81:      </div>
+82:      </div>
+83:      <% end %>
+84:      <% end %>
+85:      </div>
+86:    
+87:      <!—Create the submit button for the form -->
+88:      <% if f.new? %>
+89:      <div class="mt-3">
+90:        <%= f.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+91:      </div>
+92:      <% end %>
+93:    <% end %>
+94:    <% end %>
+95:     
+96:    
+97:     <script>
+98:     //waits for document to fully load
+99:     document.addEventListener('DOMContentLoaded', function() {
+100:      //adds an event listener to detect clicks of the "remove this line" links
+101:      document.addEventListener('click', function(e) {
+102:        //if an object with 'remove-category' as a style class is clicked
+103:        if (e.target && e.target.classList.contains('remove-category')){
+104:          //prevents link behaving as normal link
+105:          e.preventDefault();
+106:    
+107:          //makes sure if the remove function executes, it won't remove all
+108:          const categoryFields = document.querySelectorAll('.category-field');
+109:          //if at least one still remains, delete the one that the link is associated with
+110:          if (categoryFields.length > 1) {
+111:            e.target.closest('.category-field').remove();
+112:          }
+113:        }
+114:      });
+115:     });
+116:    
+117:     </script>
+  
+app/views/quotes/_form.html.erb:119: syntax error, unexpected `end'
+app/views/quotes/_form.html.erb:119: syntax error, unexpected `end'
+app/views/quotes/_form.html.erb:119: syntax error, unexpected `end'
+app/views/quotes/_form.html.erb:119: syntax error, unexpected `end'
+app/views/quotes/new.html.erb:3
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 18:29:25 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 79.7ms | Allocations: 21044)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 84.5ms | Allocations: 21315)
+  Rendered layout layouts/application.html.erb (Duration: 88.4ms | Allocations: 21403)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 1.0ms | Allocations: 23398)
+
+
+  
+ActionView::Template::Error (undefined method `new?' for #<ActionView::Helpers::FormBuilder:0x00007f60bebc9bb8 @nested_child_index={"quote[quote_categories_attributes]"=>3}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false, :local=>true}, @template=#<ActionView::Base:0x0000000000d250>, @object=#<Quote id: nil, qtext: nil, qyear: nil, qcom: nil, ispublic: false, user_id: nil, source_id: nil, created_at: nil, updated_at: nil>, @object_name="quote", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>):
+    85:   </div>
+    86: 
+    87:   <!—Create the submit button for the form -->
+    88:   <% if f.new? %>
+    89:   <div class="mt-3">
+    90:     <%= f.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+    91:   </div>
+  
+app/views/quotes/_form.html.erb:88
+app/views/quotes/_form.html.erb:18
+app/views/quotes/new.html.erb:3
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 18:30:22 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 23.7ms | Allocations: 7717)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 7986)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 8075)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.5ms | Allocations: 10081)
+
+
+  
+ActionView::Template::Error (undefined method `new?' for #<Quote id: nil, qtext: nil, qyear: nil, qcom: nil, ispublic: false, user_id: nil, source_id: nil, created_at: nil, updated_at: nil>):
+    85:   </div>
+    86: 
+    87:   <!—Create the submit button for the form -->
+    88:   <% if @quote.new? %>
+    89:   <div class="mt-3">
+    90:     <%= f.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+    91:   </div>
+  
+app/views/quotes/_form.html.erb:88
+app/views/quotes/_form.html.erb:18
+app/views/quotes/new.html.erb:3
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 18:30:32 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 41.3ms | Allocations: 7665)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 43.1ms | Allocations: 7934)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 8022)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.5ms | Allocations: 10011)
+
+
+  
+ActionView::Template::Error (undefined method `new?' for #<Quote id: nil, qtext: nil, qyear: nil, qcom: nil, ispublic: false, user_id: nil, source_id: nil, created_at: nil, updated_at: nil>):
+    85:   </div>
+    86: 
+    87:   <!—Create the submit button for the form -->
+    88:   <% if quote.new? %>
+    89:   <div class="mt-3">
+    90:     <%= f.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+    91:   </div>
+  
+app/views/quotes/_form.html.erb:88
+app/views/quotes/_form.html.erb:18
+app/views/quotes/new.html.erb:3
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 18:34:03 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 27.5ms | Allocations: 6792)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 31.2ms | Allocations: 7092)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 10629)
+Completed 200 OK in 107ms (Views: 73.7ms | ActiveRecord: 0.5ms | Allocations: 12652)
+
+
+Started GET "/quotes/new" for 127.0.0.1 at 2023-10-17 18:35:15 +0800
+Processing by QuotesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/new.html.erb within layouts/application
+  [1m[36mSource Load (0.2ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 27.1ms | Allocations: 6817)
+  Rendered quotes/new.html.erb within layouts/application (Duration: 33.7ms | Allocations: 7115)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 10615)
+Completed 200 OK in 62ms (Views: 46.6ms | ActiveRecord: 0.5ms | Allocations: 12618)
+
+
+Started GET "/your-quotes" for 127.0.0.1 at 2023-10-17 18:35:19 +0800
+Processing by HomeController#uquotes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uquotes.html.erb within layouts/application
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/home/uquotes.html.erb:5
+  [1m[36mSource Load (1.9ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ?[0m  [["id", 9]]
+  ↳ app/views/home/uquotes.html.erb:5
+  [1m[36mQuoteCategory Load (0.3ms)[0m  [1m[34mSELECT "quote_categories".* FROM "quote_categories" WHERE "quote_categories"."quote_id" = ?[0m  [["quote_id", 20]]
+  ↳ app/views/home/uquotes.html.erb:5
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/home/uquotes.html.erb:5
+  Rendered home/uquotes.html.erb within layouts/application (Duration: 100.5ms | Allocations: 14443)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 1029)
+  Rendered layout layouts/application.html.erb (Duration: 107.9ms | Allocations: 17752)
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 2.8ms | Allocations: 18540)
+
+
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:35:21 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.3ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 36.5ms | Allocations: 4774)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 7369)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.6ms | Allocations: 8808)
+
+
+Started GET "/quotes/20/edit" for 127.0.0.1 at 2023-10-17 18:35:23 +0800
+Processing by QuotesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/edit.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+  ↳ app/views/quotes/_form.html.erb:58
+  [1m[36mQuoteCategory Load (0.1ms)[0m  [1m[34mSELECT "quote_categories".* FROM "quote_categories" WHERE "quote_categories"."quote_id" = ?[0m  [["quote_id", 20]]
+  ↳ app/views/quotes/_form.html.erb:64
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/quotes/_form.html.erb:75:in `collect'
+  Rendered quotes/_form.html.erb (Duration: 8.1ms | Allocations: 4769)
+  Rendered quotes/edit.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5057)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 438)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7651)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.6ms | Allocations: 9117)
+
+
+Started PATCH "/quotes/20" for 127.0.0.1 at 2023-10-17 18:35:29 +0800
+Processing by QuotesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "quote"=>{"user_id"=>"17", "qtext"=>"Friendship is like pissing your pants: Everyone can see it, but only you can feel it's warmth <3", "qyear"=>"1687", "qcom"=>"Shortly before he was stabbed the first time", "ispublic"=>"1", "source_id"=>"9", "quote_categories_attributes"=>{"0"=>{"category_id"=>"1", "id"=>"22"}}}, "commit"=>"Edit Quote", "id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+  [1m[36mQuoteCategory Load (0.2ms)[0m  [1m[34mSELECT "quote_categories".* FROM "quote_categories" WHERE "quote_categories"."quote_id" = ? AND "quote_categories"."id" = ?[0m  [["quote_id", 20], ["id", 22]]
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+  [1m[36mQuoteCategory Update (9.4ms)[0m  [1m[33mUPDATE "quote_categories" SET "category_id" = ?, "updated_at" = ? WHERE "quote_categories"."id" = ?[0m  [["category_id", 1], ["updated_at", "2023-10-17 10:35:29.578223"], ["id", 22]]
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+  [1m[36mTRANSACTION (34.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/quotes_controller.rb:43:in `block in update'
+Redirected to http://localhost:3000/quotes/20
+Completed 302 Found in 111ms (ActiveRecord: 44.8ms | Allocations: 10454)
+
+
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:35:29 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2353)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4949)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 5700)
+
+
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:37:15 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  Rendered quotes/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2266)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2354)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 3667)
+
+
+  
+ActionView::Template::Error (undefined method `category' for #<Quote id: 20, qtext: "Friendship is like pissing your pants: Everyone ca...", qyear: "1687", qcom: "Shortly before he was stabbed the first time", ispublic: true, user_id: 17, source_id: 9, created_at: "2023-10-17 01:42:47.674645000 +0000", updated_at: "2023-10-17 01:42:47.674645000 +0000">):
+    11: 
+    12: 
+    13: <div class="mb-3">
+    14:  <label class="form-label"><strong>Category:</strong></label> <%= @quote.category.catname %>
+    15: </div>
+    16: 
+    17: 
+  
+app/views/quotes/show.html.erb:14
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:37:46 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  Rendered quotes/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2259)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2347)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 3658)
+
+
+  
+ActionView::Template::Error (undefined method `quote_category' for #<Quote id: 20, qtext: "Friendship is like pissing your pants: Everyone ca...", qyear: "1687", qcom: "Shortly before he was stabbed the first time", ispublic: true, user_id: 17, source_id: 9, created_at: "2023-10-17 01:42:47.674645000 +0000", updated_at: "2023-10-17 01:42:47.674645000 +0000">):
+    11: 
+    12: 
+    13: <div class="mb-3">
+    14:  <label class="form-label"><strong>Category:</strong></label> <%= @quote.quote_category.category.catname %>
+    15: </div>
+    16: 
+    17: 
+  
+app/views/quotes/show.html.erb:14
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:38:03 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  Rendered quotes/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2231)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2319)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 3630)
+
+
+  
+ActionView::Template::Error (undefined method `category' for #<Quote id: 20, qtext: "Friendship is like pissing your pants: Everyone ca...", qyear: "1687", qcom: "Shortly before he was stabbed the first time", ispublic: true, user_id: 17, source_id: 9, created_at: "2023-10-17 01:42:47.674645000 +0000", updated_at: "2023-10-17 01:42:47.674645000 +0000">):
+    11: 
+    12: 
+    13: <div class="mb-3">
+    14:  <label class="form-label"><strong>Category:</strong></label> <%= @quote.category.catname %>
+    15: </div>
+    16: 
+    17: 
+  
+app/views/quotes/show.html.erb:14
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:38:12 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  Rendered quotes/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2231)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2319)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3630)
+
+
+  
+ActionView::Template::Error (undefined method `category' for #<Quote id: 20, qtext: "Friendship is like pissing your pants: Everyone ca...", qyear: "1687", qcom: "Shortly before he was stabbed the first time", ispublic: true, user_id: 17, source_id: 9, created_at: "2023-10-17 01:42:47.674645000 +0000", updated_at: "2023-10-17 01:42:47.674645000 +0000">):
+    11: 
+    12: 
+    13: <div class="mb-3">
+    14:  <label class="form-label"><strong>Category:</strong></label> <%= @quote.category %>
+    15: </div>
+    16: 
+    17: 
+  
+app/views/quotes/show.html.erb:14
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:38:27 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  Rendered quotes/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2259)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2347)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 3658)
+
+
+  
+ActionView::Template::Error (undefined method `category_id' for #<Quote id: 20, qtext: "Friendship is like pissing your pants: Everyone ca...", qyear: "1687", qcom: "Shortly before he was stabbed the first time", ispublic: true, user_id: 17, source_id: 9, created_at: "2023-10-17 01:42:47.674645000 +0000", updated_at: "2023-10-17 01:42:47.674645000 +0000">):
+    11: 
+    12: 
+    13: <div class="mb-3">
+    14:  <label class="form-label"><strong>Category:</strong></label> <%= @quote.category_id %>
+    15: </div>
+    16: 
+    17: 
+  
+app/views/quotes/show.html.erb:14
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:38:59 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2698)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 6219)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.4ms | Allocations: 7553)
+
+
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:43:47 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  Rendered quotes/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1426)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms | Allocations: 2738)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+
+<div class="mb-3">
+ <label class="form-label"><strong>Quote:</strong></label> <%= @quote.qtext %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
+</div>
+
+<% for @quote.each do |quote| %>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Category:</strong></label> <%= quote.category.catname %>
+</div>
+<% end %>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Comments:</strong></label> <%= @quote.qcom %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Public:</strong></label> <%= @quote.ispublic %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>User:</strong></label> <%= @quote.user.fname %>
+</div>
+
+
+<% if logged_in? && (is_administrator? || (@quote.user_id == session[:user_id]) ) %>
+<div>
+  <%= link_to "Edit this quote", edit_quote_path(@quote) %> |
+  <%= link_to "Back to quotes", quotes_path %>
+
+  <%= button_to "Destroy this quote", @quote, method: :delete %>
+</div>
+<% else %>
+<div>
+<%= link_to "Return to main", root_path %>
+</div>
+<% end %>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    
+4:    <div class="mb-3">
+5:     <label class="form-label"><strong>Quote:</strong></label> <%= @quote.qtext %>
+6:    </div>
+7:    
+8:    <div class="mb-3">
+9:     <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
+10:    </div>
+11:    
+12:    <% for @quote.each do |quote| %>
+13:    
+14:    <div class="mb-3">
+15:     <label class="form-label"><strong>Category:</strong></label> <%= quote.category.catname %>
+16:    </div>
+17:    <% end %>
+18:    
+19:    <div class="mb-3">
+20:     <label class="form-label"><strong>Comments:</strong></label> <%= @quote.qcom %>
+21:    </div>
+22:    
+23:    <div class="mb-3">
+24:     <label class="form-label"><strong>Public:</strong></label> <%= @quote.ispublic %>
+25:    </div>
+26:    
+27:    <div class="mb-3">
+28:     <label class="form-label"><strong>User:</strong></label> <%= @quote.user.fname %>
+29:    </div>
+30:    
+31:    
+32:    <% if logged_in? && (is_administrator? || (@quote.user_id == session[:user_id]) ) %>
+33:    <div>
+34:      <%= link_to "Edit this quote", edit_quote_path(@quote) %> |
+35:      <%= link_to "Back to quotes", quotes_path %>
+36:    
+37:      <%= button_to "Destroy this quote", @quote, method: :delete %>
+38:    </div>
+39:    <% else %>
+40:    <div>
+41:    <%= link_to "Return to main", root_path %>
+42:    </div>
+43:    <% end %>
+  
+app/views/quotes/show.html.erb:17: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/quotes/show.html.erb:17: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/quotes/show.html.erb:17: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/quotes/show.html.erb:17: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:44:05 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  Rendered quotes/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1409)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 2721)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+
+<div class="mb-3">
+ <label class="form-label"><strong>Quote:</strong></label> <%= @quote.qtext %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
+</div>
+
+<% for @quote.each do |quote| %>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Category:</strong></label> <%= quote.category.catname %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Comments:</strong></label> <%= @quote.qcom %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>Public:</strong></label> <%= @quote.ispublic %>
+</div>
+
+<div class="mb-3">
+ <label class="form-label"><strong>User:</strong></label> <%= @quote.user.fname %>
+</div>
+
+
+<% if logged_in? && (is_administrator? || (@quote.user_id == session[:user_id]) ) %>
+<div>
+  <%= link_to "Edit this quote", edit_quote_path(@quote) %> |
+  <%= link_to "Back to quotes", quotes_path %>
+
+  <%= button_to "Destroy this quote", @quote, method: :delete %>
+</div>
+<% else %>
+<div>
+<%= link_to "Return to main", root_path %>
+</div>
+<% end %>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    
+4:    <div class="mb-3">
+5:     <label class="form-label"><strong>Quote:</strong></label> <%= @quote.qtext %>
+6:    </div>
+7:    
+8:    <div class="mb-3">
+9:     <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
+10:    </div>
+11:    
+12:    <% for @quote.each do |quote| %>
+13:    
+14:    <div class="mb-3">
+15:     <label class="form-label"><strong>Category:</strong></label> <%= quote.category.catname %>
+16:    </div>
+17:    
+18:    <div class="mb-3">
+19:     <label class="form-label"><strong>Comments:</strong></label> <%= @quote.qcom %>
+20:    </div>
+21:    
+22:    <div class="mb-3">
+23:     <label class="form-label"><strong>Public:</strong></label> <%= @quote.ispublic %>
+24:    </div>
+25:    
+26:    <div class="mb-3">
+27:     <label class="form-label"><strong>User:</strong></label> <%= @quote.user.fname %>
+28:    </div>
+29:    
+30:    
+31:    <% if logged_in? && (is_administrator? || (@quote.user_id == session[:user_id]) ) %>
+32:    <div>
+33:      <%= link_to "Edit this quote", edit_quote_path(@quote) %> |
+34:      <%= link_to "Back to quotes", quotes_path %>
+35:    
+36:      <%= button_to "Destroy this quote", @quote, method: :delete %>
+37:    </div>
+38:    <% else %>
+39:    <div>
+40:    <%= link_to "Return to main", root_path %>
+41:    </div>
+42:    <% end %>
+  
+app/views/quotes/show.html.erb:44: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/quotes/show.html.erb:44: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/quotes/show.html.erb:44: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+app/views/quotes/show.html.erb:44: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+Started GET "/quotes/20" for 127.0.0.1 at 2023-10-17 18:44:29 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:66:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mSource Load (0.1ms)[0m  [1m[34mSELECT "sources".* FROM "sources" WHERE "sources"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/quotes/show.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered quotes/show.html.erb within layouts/application (Duration: 38.4ms | Allocations: 2709)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 6230)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.4ms | Allocations: 7564)
+
+
