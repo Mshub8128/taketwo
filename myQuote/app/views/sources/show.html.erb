@@ -31,6 +31,17 @@
  <label class="form-label"><strong>Biography:</strong></label> <%= @source.bio %>
 </div>
 
+<label class="form-label"><strong><%= "Quotes by #{@source.fname} #{@source.lname}" %> </strong></label>
+<div>
+<div>
+<% sourcequotes = Quote.where(source_id: @source.id)  %>
+<% sourcequotes.each do |quote|  %>
+  <div class="mb-3">
+  <label class="form-label"><strong> - </strong></label><%= quote.qtext %>
+  </div>
+  <% end %>
+  </div>
+  </div>
 
 <% if logged_in? && is_administrator? %>
 <div>

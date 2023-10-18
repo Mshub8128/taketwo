@@ -55,7 +55,7 @@
 
     <div class="form-group" style="padding-bottom: 10px;">
      <p>
-     <%= f.collection_select :source_id, Source.all, :id, Proc.new { |sou| "#{sou.fname} #{sou.lname}" }, { include_blank: 'Select a source' }, class: 'form-select' %>
+     <%= f.collection_select :source_id, Source.all, :id, Proc.new { |sou| "#{sou.fname} #{sou.lname}" }, { selected_value: Source.where(id: 23) }, class: 'form-select' %>
      </p>
     </div>
 

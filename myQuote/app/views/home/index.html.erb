@@ -3,13 +3,21 @@
 <p style="color: green"><%= notice %></p> 
 <h3>Most Recent Quotes</h3>
 <hr />
+
+<%# code below lists 5 most recent quotes on home page. There is an if statement to check if it is public,
+    and one to check if the year is listed (purely for formatting it aesthetically) %>
+
 <% @quotes.each do |quote| %>
     <% if quote.ispublic? %>
     <div class="card bg-body-teriary" style="margin-bottom:10px">
     <div class="card-body">
-        
+    <% if quote.qyear.nil? || quote.qyear.empty? %>
+    <p class="card-text"><%= quote.qtext %></p>
+    <p class="card-text"><%= "   -   #{quote.source.fname} #{quote.source.lname}" %> <br />[<a href="/quotes/<%= quote.id %>">Quote</a>] [<a href="/sources/<%= quote.source.id %>">Source</a>] </p> 
+    <% else %>
     <p class="card-text"><%= quote.qtext %></p>
     <p class="card-text"><%= "   -   #{quote.source.fname} #{quote.source.lname}, #{quote.qyear}" %> <br />[<a href="/quotes/<%= quote.id %>">Quote</a>] [<a href="/sources/<%= quote.source.id %>">Source</a>] </p> 
+    <% end %>
     <% end %>    
     </div>
     </div>

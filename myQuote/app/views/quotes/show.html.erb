@@ -5,14 +5,16 @@
  <label class="form-label"><strong>Quote:</strong></label> <%= @quote.qtext %>
 </div>
 
-<div class="mb-3">
- <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
-</div>
-
+<%# The if statement below is for formatting. If a year isn't listed, then there'll be no comma after the source name. %>
 
 <div class="mb-3">
- <label class="form-label"><strong>Category:</strong></label> <%=  %>
-</div>
+<% if @quote.qyear.nil? || @quote.qyear.empty? %>
+  <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}" %>
+<% else %>
+  <label class="form-label"><strong>Source:</strong></label> <%= "#{@quote.source.fname} #{@quote.source.lname}, #{@quote.qyear}" %>
+<% end %>
+ </div>
+
 
 <div class="mb-3">
  <label class="form-label"><strong>Comments:</strong></label> <%= @quote.qcom %>

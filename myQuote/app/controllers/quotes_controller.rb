@@ -15,7 +15,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
-    4.times {@quote.quote_categories.build}
+    8.times {@quote.quote_categories.build}
   end
 
   # GET /quotes/1/edit
