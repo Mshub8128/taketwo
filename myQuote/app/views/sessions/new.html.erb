@@ -2,8 +2,9 @@
 <% if flash[:error] %>
     <p class="error" style="color:red;"><%= flash[:error] %></p>
 <% end %>
-
 <p style="color: green"><%= notice %></p> 
+
+<!-- This file is part of the requirement to have sessions, which enables a lot of functionality-->
 
 <h2>Sign in</h2>
 <%= form_tag login_path, method: :post do %>

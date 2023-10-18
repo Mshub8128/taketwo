@@ -7,6 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!-- The following section is a series of header links -->
         <li class="nav-item">
         <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
@@ -18,6 +19,7 @@
         <li class="nav-item">
         <%= link_to 'About', about_path, class:"nav-link" %>
         </li>
+        <!-- The following section is a series of header links, that change dependent on whether the user is signed in on not-->
 
         <% if !logged_in? %>
           <li class="nav-item">
@@ -36,6 +38,7 @@
           <%= button_to "Sign Out", logout_path, method: :delete, class:"btn btn-link nav-link" %>
           </li>
         <% end %>
+        <!-- The following section is a header link that changes to either display the user info, or admin info, depending on the current user.  -->
 
         <% if logged_in? && !is_administrator? %>
         <li class="nav-item dropdown">
