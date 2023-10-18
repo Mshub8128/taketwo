@@ -2,3 +2,11 @@
 
 <p style="color: green"><%= notice %></p>
 <h3>Administrator Landing Page</h3>
+
+
+<div>
+<%= "There are currently:" %>
+<%= " - #{User.all.count} users." %>
+<%= " - #{Quote.all.count} quotes." %>
+<%= " - #{Source.all.count} sources." %>
+</div>

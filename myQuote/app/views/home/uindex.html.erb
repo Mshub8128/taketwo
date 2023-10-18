@@ -5,6 +5,10 @@
 <h3><%= session[:fname] %>'s Page</h3>
 <p>Welcome back</p>
 
+<div>
+<%= "You currently have #{Quote.where(user_id: session[:user_id]).count} quotes." %>
+
+</div>
 <%#link for logged in user to edit their details %>
 
 <%= link_to "Edit your account details", edit_user_path(session[:user_id]) %>

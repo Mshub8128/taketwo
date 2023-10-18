@@ -46,6 +46,7 @@ end
     end
   end
 
+
   # PATCH/PUT /users/1 or /users/1.json
   def update
     respond_to do |format|

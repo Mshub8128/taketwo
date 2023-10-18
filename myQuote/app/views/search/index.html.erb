@@ -14,10 +14,13 @@
     <!-- The line below checks that the form has been submitted by checking the existence of 
 a params[:category_query] object, which will return either true of false; if false, no 
 part of the code that follows will be executed -->
+
 <% if params[:category_query].present? %>
+
     <!-- The line below checks that quote(s) with the category were in fact 
     found as indicated by @quotematch.present? returning either true of false; if true, 
     execute the if block of code, and if false, execute the else block of code -->
+
     <% if @quotematch.present? %>
         <h4 style="padding-top: 15px;">Results:</h4>
             <!-- Cycle through each quote returned and print its title, description and link 
