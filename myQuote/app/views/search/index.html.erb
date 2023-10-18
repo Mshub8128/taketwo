@@ -26,10 +26,13 @@ part of the code that follows will be executed -->
             <!-- Cycle through each quote returned and print its title, description and link 
             to the view -->
             <% @quotematch.each do |quote| %>
+                <% if quote.ispublic? %>
             <h5 class="text-primary"><%= quote.qtext %></h5>
             <p><%= "#{quote.source.fname} #{quote.source.lname} #{quote.qyear}" %> [<a href="/quotes/<%= quote.id %>">Details</a>]</p>
             <br />
             <% end %>
+            <% end %>
+            
     <% else %>
         <p>No matching quotes found.</p>
     <% end %>

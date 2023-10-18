@@ -28,6 +28,7 @@
  <label class="form-label"><strong>User:</strong></label> <%= @quote.user.fname %>
 </div>
 
+<!-- can edit/delete quote IF you're admin, or made the quote -->
 
 <% if logged_in? && (is_administrator? || (@quote.user_id == session[:user_id]) ) %>
 <div>

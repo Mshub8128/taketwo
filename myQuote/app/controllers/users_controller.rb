@@ -35,13 +35,14 @@ end
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
+      if !@user.save
+        flash.now[:alert] = "Email must be unique"
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      else      
         #format.html { redirect_to user_url(@user), notice: "User was successfully created." }
         format.html {redirect_to login_path, notice: "Sign up successful. Please log in."}
         format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end

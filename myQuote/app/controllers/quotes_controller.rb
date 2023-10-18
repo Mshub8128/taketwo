@@ -13,6 +13,7 @@ class QuotesController < ApplicationController
   end
 
   # GET /quotes/new
+  # the second indented line adds the category entry form. 8 was an arbitrary number of categories to have fields for.
   def new
     @quote = Quote.new
     8.times {@quote.quote_categories.build}

@@ -1,14 +1,18 @@
 <!-- ~app/views/home/uindex.html.erb -->
-
 <p style+"color: green"><%= notice %></p>
+
+<!-- Welcomes the user by their first name -->
 
 <h3><%= session[:fname] %>'s Page</h3>
 <p>Welcome back</p>
 
+
+<!-- this code below just counts the quotes uploaded by the user so that the screen is less bare -->
+
 <div>
 <%= "You currently have #{Quote.where(user_id: session[:user_id]).count} quotes." %>
-
 </div>
+
 <%#link for logged in user to edit their details %>
 
 <%= link_to "Edit your account details", edit_user_path(session[:user_id]) %>
